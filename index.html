@@ -106,8 +106,8 @@
 
     .pill {
       display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
+      padding: 10px 10px;
+      border-radius: 99px;
       background: #eaf8ea;
       color: var(--green-600);
       font-weight: 600;
@@ -588,7 +588,7 @@
 
     /* Rodapé */
     footer {
-      padding: 20px 0;
+      padding: 20px 10;
       background: #0b200b;
       color: #e6ffe6;
       margin-top: 30px;
@@ -602,7 +602,7 @@
 
     /* Novos estilos para as imagens */
     .image-container {
-      margin: 20px 0;
+      margin: 50px 0;
       padding: 15px;
       background: #fff;
       border-radius: 12px;
@@ -617,11 +617,11 @@
     }
 
     .image-container img {
-      width: 100%;
+      width: 80%;
       height: auto;
       border-radius: 8px;
     }
-
+   
     /* Estilos para os passos */
     .steps-container {
       display: flex;
@@ -677,7 +677,7 @@
     }
 
     .font-size-big {
-      font-size: 150px;
+      font-size: 80px;
 
     }
 
@@ -715,6 +715,25 @@
     .linkedin-btn:hover {
       background: #005582;
     }
+    /*grid nas imagens 2x3*/
+    .image-container{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px; margin:16px 0 28px;
+    }
+    .image-container .image-title,
+    .image-container p.lead{
+      grid-column:1 / -1; margin:0 0 6px; font-weight:600;
+    }
+    .image-container img{
+      width:100%; aspect-ratio:4/3; object-fit:cover;
+      border-radius:10px; display:block;
+    }
+    /* limita a 2 linhas (3x2=6). Da 7ª em diante some */
+    .image-container img:nth-of-type(n+7){ display:none; 
+    }
+
+
   </style>
 </head>
 
@@ -747,8 +766,9 @@
     <!-- Sobre o Projeto -->
     <div id="sobre" class="main-section">
       <div class="section-header">
-        <span class="pill font-size-big"></i><i class="fa-solid fa-screwdriver-wrench"></i></i><i class="fa-solid fa-plane"></i>
-          TG</span>
+        <span class="pill font-size-big" > TG </span<i><i class="fa-solid fa-screwdriver-wrench"></i> </i><i class="fa-solid fa-plane" > </i> 
+          </span>
+          
         <h2>Sobre o Projeto</h2>
         <p class="lead">A inspeção boroscópica é um procedimento essencial na manutenção aeronáutica, permitindo avaliar
           a condição interna de componentes do motor sem a necessidade de desmontagem. Este trabalho tem como objetivo
@@ -762,7 +782,7 @@
           <p class="subtitle">Guia passo a passo para inspeção interna de motores utilizando boroscópio</p>
         </article>
 
-        <aside class="card" style="padding:16px">
+        <aside class="card" style="padding:20px">
           <h3>Passos da Inspeção</h3>
 
           <div class="steps-container">
@@ -874,29 +894,34 @@
     <div id="fotos" class="main-section">
       <div class="section-header">
         <h2>Galeria de Fotos</h2>
-        <p class="lead">Fotos do projeto e inspeções realizadas</p>
+        <p class="lead">Fotos do Motor e Ferramentas utilizadas no ensaio</p>
       </div>
 
         <div class="image-container">
-        <div class="image-title">Placa do motor Makila 1A1</div>
-        <img src="imagens/foto1.jpg" alt="Placa do motor Makila 1A1">
-      </div>
-
-      <div class="image-container">
-        <div class="image-title">Placa Motor makila 1A1</div>
+        <div class="image-title">Placas de identificação do motor Makila 1A1</div>
+        <img src="imagens/foto1.jpg" alt="Placa do motor Makila 1A1">          
         <img src="imagens/foto5.jpg" alt="Outra visão da placa do motor">
       </div>
-
+     
       <div class="image-container">
-        <div class="image-title">Motor makila 1A1</div>
+        <div class="image-title">Fotos do Motor makila 1A1</div>
         <img src="imagens/foto3.jpg" alt="Motor Makila 1A1">
+        <img src="imagens/foto11.jpg" alt="Componente interno do motor">
+        <img src="imagens/IMG_5.jpg" alt="Componente interno do motor">
+        <img src="imagens/IMG_6.jpg" alt="Componente interno do motor">
+        <img src="imagens/IMG_7.jpg" alt="Componente interno do motor">
+        <img src="imagens/IMG_8.jpg" alt="Componente interno do motor">        
+      </div>
+          
+      <div class="image-container">
+        <div class="image-title">Ferramentas utilizadas no Ensaio</div>
+        <img src="imagens/IMG_4F.jpg" alt="Motor Makila 1A1">
+        <img src="imagens/IMG_5F.jpg" alt="Componente interno do motor">
+        <img src="imagens/IMG_2F.jpg" alt="Componente interno do motor">                      
       </div>
 
-      <div class="image-container">
-        <div class="image-title">Componente do motor</div>
-        <img src="imagens/foto11.jpg" alt="Componente interno do motor">
-      </div>
-    </div>
+      
+    
 
         </div>
     </div>
@@ -920,18 +945,66 @@
       <div class="section-header">
         <h2>Vídeos</h2>
         <p class="lead">Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-      </div>
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="video-thumb">
-            <img alt="Miniatura do vídeo" src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" />
-            <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+      
+          <div>
+            <div class="container">
+              <div class="div-video">
+               <iframe width="1250" height="850" src="https://www.youtube.com/embed/dnPIWapwH_Y?si=Gm10ml7fatyabjvq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+        
           </div>
-          <div class="video-desc">Editart ++Vídeo demonstrativo da inspeção boroscópica</div>
         </div>
       </div>
     </div>
-
+     <div class="image-container">
+        <div class="image-title">Imagens capturadas da parte interna do motor</div>
+          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
+         <img src="imagens/1 _tubo (1).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1 _tubo (2).jpeg" alt="Componente interno do motor">
+         <img src="imagens/1 _tubo (3).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1 _tubo (4).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1 _tubo (5).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1 _tubo (6).jpeg" alt="Motor Makila 1A1">         
+    </div> 
+     <div class="image-container">
+        <div class="image-title"></div>
+          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
+          <img src="imagens/1_tubo2 (1).jpeg" alt="Motor Makila 1A1">
+          <img src="imagens/1_tubo2 (2).jpeg" alt="Motor Makila 1A1">
+          <img src="imagens/1_tubo2 (3).jpeg" alt="Motor Makila 1A1">
+          <img src="imagens/1_tubo2 (4).jpeg" alt="Motor Makila 1A1">
+          <img src="imagens/1_tubo2 (5).jpeg" alt="Motor Makila 1A1">              
+      </div>
+      <div class="image-container">
+        <div class="image-title"></div>
+          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
+         <img src="imagens/1.2_base interna (1).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1.2_base interna (2).jpeg" alt="Motor Makila 1A1"> 
+         <img src="imagens/1.2_base interna (3).jpeg" alt="Motor Makila 1A1"> 
+         <img src="imagens/1.2_base interna (4).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/1.2_base interna (5).jpeg" alt="Motor Makila 1A1">              
+      </div>
+      <div class="image-container">
+        <div class="image-title"></div>
+          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
+         <img src="imagens/2_ base interna (1).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/2_ base interna (2).jpeg" alt="Motor Makila 1A1"> 
+                
+      </div>
+      <div class="image-container">
+        <div class="image-title"></div>
+          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
+         <img src="imagens/imag21_dano (1).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/imag21_dano (2).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/imag21_dano (3).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/imag21_dano (4).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/imag21_dano (5).jpeg" alt="Motor Makila 1A1">
+         <img src="imagens/imag21_dano (6).jpeg" alt="Motor Makila 1A1"> 
+                
+      </div>
+  </div>
+  </div>
     <!-- Documentos -->
     <div id="documentos" class="main-section">
       <div class="section-header">
