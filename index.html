@@ -16,7 +16,7 @@
     :root {
       --green-700: #006400;
       --green-600: #008000;
-      --black-900:#000000;
+      --black-900: #000000;
       --bg: #ffffff;
       --text: #0f172a;
       --muted: #64748b;
@@ -621,7 +621,7 @@
       height: auto;
       border-radius: 8px;
     }
-   
+
     /* Estilos para os passos */
     .steps-container {
       display: flex;
@@ -715,25 +715,34 @@
     .linkedin-btn:hover {
       background: #005582;
     }
+
     /*grid nas imagens 2x3*/
-    .image-container{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:12px; margin:16px 0 28px;
+    .image-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0 28px;
     }
+
     .image-container .image-title,
-    .image-container p.lead{
-      grid-column:1 / -1; margin:0 0 6px; font-weight:600;
+    .image-container p.lead {
+      grid-column: 1 / -1;
+      margin: 0 0 6px;
+      font-weight: 600;
     }
-    .image-container img{
-      width:100%; aspect-ratio:4/3; object-fit:cover;
-      border-radius:10px; display:block;
+
+    .image-container img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
     }
+
     /* limita a 2 linhas (3x2=6). Da 7ª em diante some */
-    .image-container img:nth-of-type(n+7){ display:none; 
+    .image-container img:nth-of-type(n+7) {
+      display: none;
     }
-
-
   </style>
 </head>
 
@@ -766,128 +775,125 @@
     <!-- Sobre o Projeto -->
     <div id="sobre" class="main-section">
       <div class="section-header">
-        <span class="pill font-size-big" > TG </span<i><i class="fa-solid fa-screwdriver-wrench"></i> </i><i class="fa-solid fa-plane" > </i> 
-          </span>
-          
+        <span class="pill font-size-big"> TG </span<i><i class="fa-solid fa-screwdriver-wrench"></i> </i><i
+            class="fa-solid fa-plane"> </i>
+        </span>
+
         <h2>Sobre o Projeto</h2>
         <p class="lead">A inspeção boroscópica é um procedimento essencial na manutenção aeronáutica, permitindo avaliar
           a condição interna de componentes do motor sem a necessidade de desmontagem. Este trabalho tem como objetivo
           padronizar a execução dessa inspeção, desde o uso adequado do boroscópio até a correta identificação e
           registro dos resultados obtidos.</p>
-          
+
       </div>
 
       <div class="content" style="display:flex; flex-direction:column; gap:16px; align-items:stretch;">
-  <article class="intro-card card">
-    <h3>Orientações rápidas - Passos da Inspeção Boroscópica em Motor</h3>
-    <p class="subtitle">Guia passo a passo para inspeção interna de motores utilizando boroscópio</p>
-  </article>
+        <article class="intro-card card">
+          <h3>Orientações rápidas - Passos da Inspeção Boroscópica em Motor</h3>
+          <p class="subtitle">Guia passo a passo para inspeção interna de motores utilizando boroscópio</p>
+        </article>
 
-  <aside class="card" style="padding:0">
-    <h3>Passos da Inspeção</h3>
+        <aside class="card" style="padding:0">
+          <h3>Passos da Inspeção</h3>
 
-    <div class="steps-container">
-      <!-- Passo 1 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">1 - Preparação</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Certifique-se de que o motor está frio e seguro para manutenção</li>
-            <li>Desconecte fontes de energia/hidráulicas conforme requerido</li>
-            <li>Reúna o boroscópio apropriado</li>
-            <li>Prepare a área de trabalho com iluminação adequada</li>
-          </ul>
-          <div class="warning">
-            <strong>Importante:</strong> Utilize sempre equipamento de proteção individual (EPI) adequado.
+          <div class="steps-container">
+            <!-- Passo 1 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">1 - Preparação</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Reúna o boroscópio apropriado</li>
+                  <li>Prepare a área de trabalho com iluminação adequada</li>
+                </ul>
+                <div class="warning">
+                  <strong>Importante:</strong> Utilize sempre equipamento de proteção individual (EPI) adequado.
+                </div>
+              </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">2 - Acesso</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Cada ponto de inspeção é identificado no manual</li>
+                  <li>Limpe a área ao redor dos pontos de acesso antes de abrir</li>
+                  <li>Organize as peças removidas de forma segura e ordenada</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">3 - Inserção do Boroscópio</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Introduza o equipamento cuidadosamente pelos pontos de acesso designados</li>
+                  <li>Evite contato prolongado com pás e componentes internos para não danificá-los</li>
+                  <li>Mantenha uma velocidade constante e suave durante a inserção</li>
+                  <li>Esteja atento à curvatura e limites de flexão do equipamento</li>
+                </ul>
+                <div class="note">
+                  <strong>Dica:</strong> Utilize a menor distância focal possível para obter imagens mais nítidas.
+                </div>
+              </div>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">4 - Inspeção Visual</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Inspecione a turbina → corrosão, trincas térmicas, perda de material</li>
+                 
+                </ul>
+              </div>
+            </div>
+
+            <!-- Passo 5 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">5 - Registro</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Capture fotos ou vídeos das áreas inspecionadas</li>
+                  <li>Compare com limites de aceitabilidade definidos no manual</li>
+                  <li>Preencha a ficha de inspeção com os achados</li>
+                  <li>Documente qualquer anomalia com precisão</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Passo 6 -->
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-number">6 - Conclusão</div>
+              </div>
+              <div class="step-content">
+                <ul>
+                  <li>Retire o boroscópio cuidadosamente e reinstale tampas e plugs de acesso</li>
+                  <li>Certifique-se de que não ficaram objetos soltos no interior</li>
+                  <li>Atualize registros de manutenção</li>
+                  <li>Armazene o boroscópio adequadamente após limpeza e desinfecção</li>
+                </ul>
+                <div class="warning">
+                  <strong>Verificação final:</strong> Realize uma última inspeção visual para garantir que tudo está
+                  devidamente fechado e seguro.
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </aside>
       </div>
-
-      <!-- Passo 2 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">2 - Acesso</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Remova tampas e plugs de acesso específicos indicados no motor</li>
-            <li>Cada ponto de inspeção é identificado no manual</li>
-            <li>Limpe a área ao redor dos pontos de acesso antes de abrir</li>
-            <li>Organize as peças removidas de forma segura e ordenada</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Passo 3 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">3 - Inserção do Boroscópio</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Introduza o equipamento cuidadosamente pelos pontos de acesso designados</li>
-            <li>Evite contato prolongado com pás e componentes internos para não danificá-los</li>
-            <li>Mantenha uma velocidade constante e suave durante a inserção</li>
-            <li>Esteja atento à curvatura e limites de flexão do equipamento</li>
-          </ul>
-          <div class="note">
-            <strong>Dica:</strong> Utilize a menor distância focal possível para obter imagens mais nítidas.
-          </div>
-        </div>
-      </div>
-
-      <!-- Passo 4 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">4 - Inspeção Visual</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Observe condições da câmara de combustão → trincas, queimaduras, erosão</li>
-            <li>Verifique o compressor → desgaste, impacto de FOD, deformações nas pás</li>
-            <li>Inspecione a turbina → corrosão, trincas térmicas, perda de material</li>
-            <li>Examine rolamentos e selos visíveis → sinais de sobreaquecimento ou falha</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Passo 5 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">5 - Registro</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Capture fotos ou vídeos das áreas inspecionadas</li>
-            <li>Compare com limites de aceitabilidade definidos no manual</li>
-            <li>Preencha a ficha de inspeção com os achados</li>
-            <li>Documente qualquer anomalia com precisão</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Passo 6 -->
-      <div class="step-card">
-        <div class="step-header">
-          <div class="step-number">6 - Conclusão</div>
-        </div>
-        <div class="step-content">
-          <ul>
-            <li>Retire o boroscópio cuidadosamente e reinstale tampas e plugs de acesso</li>
-            <li>Certifique-se de que não ficaram objetos soltos no interior</li>
-            <li>Atualize registros de manutenção</li>
-            <li>Armazene o boroscópio adequadamente após limpeza e desinfecção</li>
-          </ul>
-          <div class="warning">
-            <strong>Verificação final:</strong> Realize uma última inspeção visual para garantir que tudo está devidamente fechado e seguro.
-          </div>
-        </div>
-      </div>
-    </div>
-  </aside>
-</div>
 
     </div>
 
@@ -898,12 +904,12 @@
         <p class="lead">Fotos do Motor e Ferramentas utilizadas no ensaio</p>
       </div>
 
-        <div class="image-container">
+      <div class="image-container">
         <div class="image-title">Placas de identificação do motor Makila 1A1</div>
-        <img src="imagens/foto1.jpg" alt="Placa do motor Makila 1A1">          
+        <img src="imagens/foto1.jpg" alt="Placa do motor Makila 1A1">
         <img src="imagens/foto5.jpg" alt="Outra visão da placa do motor">
       </div>
-     
+
       <div class="image-container">
         <div class="image-title">Fotos do Motor makila 1A1</div>
         <img src="imagens/foto3.jpg" alt="Motor Makila 1A1">
@@ -911,20 +917,20 @@
         <img src="imagens/IMG_5.jpg" alt="Componente interno do motor">
         <img src="imagens/IMG_6.jpg" alt="Componente interno do motor">
         <img src="imagens/IMG_7.jpg" alt="Componente interno do motor">
-        <img src="imagens/IMG_8.jpg" alt="Componente interno do motor">        
+        <img src="imagens/IMG_8.jpg" alt="Componente interno do motor">
       </div>
-          
+
       <div class="image-container">
         <div class="image-title">Ferramentas utilizadas no Ensaio</div>
         <img src="imagens/IMG_4F.jpg" alt="Motor Makila 1A1">
         <img src="imagens/IMG_5F.jpg" alt="Componente interno do motor">
-        <img src="imagens/IMG_2F.jpg" alt="Componente interno do motor">                      
+        <img src="imagens/IMG_2F.jpg" alt="Componente interno do motor">
       </div>
 
-      
-    
 
-        </div>
+
+
+    </div>
     </div>
 
     <!-- Modal para visualização ampliada -->
@@ -946,126 +952,119 @@
       <div class="section-header">
         <h2>Vídeos</h2>
         <p class="lead">Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-      
-          <div>
-            <div class="container">
-              <div class="div-video">
-               <iframe width="1250" height="850" src="https://www.youtube.com/embed/dnPIWapwH_Y?si=Gm10ml7fatyabjvq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div>
+          <div class="container">
+            <div class="div-video">
+              <iframe width="1250" height="850" src="https://www.youtube.com/embed/dnPIWapwH_Y?si=Gm10ml7fatyabjvq"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
-        
+
           </div>
         </div>
       </div>
     </div>
-     <div class="image-container">
-        <div class="image-title">Imagens capturadas da parte interna do motor</div>
-          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-         <img src="imagens/1 _tubo (1).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1 _tubo (2).jpeg" alt="Componente interno do motor">
-         <img src="imagens/1 _tubo (3).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1 _tubo (4).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1 _tubo (5).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1 _tubo (6).jpeg" alt="Motor Makila 1A1">         
-    </div> 
-     <div class="image-container">
-        <div class="image-title"></div>
-          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-          <img src="imagens/1_tubo2 (1).jpeg" alt="Motor Makila 1A1">
-          <img src="imagens/1_tubo2 (2).jpeg" alt="Motor Makila 1A1">
-          <img src="imagens/1_tubo2 (3).jpeg" alt="Motor Makila 1A1">
-          <img src="imagens/1_tubo2 (4).jpeg" alt="Motor Makila 1A1">
-          <img src="imagens/1_tubo2 (5).jpeg" alt="Motor Makila 1A1">              
-      </div>
-      <div class="image-container">
-        <div class="image-title"></div>
-          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-         <img src="imagens/1.2_base interna (1).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1.2_base interna (2).jpeg" alt="Motor Makila 1A1"> 
-         <img src="imagens/1.2_base interna (3).jpeg" alt="Motor Makila 1A1"> 
-         <img src="imagens/1.2_base interna (4).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/1.2_base interna (5).jpeg" alt="Motor Makila 1A1">              
-      </div>
-      <div class="image-container">
-        <div class="image-title"></div>
-          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-         <img src="imagens/2_ base interna (1).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/2_ base interna (2).jpeg" alt="Motor Makila 1A1"> 
-                
-      </div>
-      <div class="image-container">
-        <div class="image-title"></div>
-          <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen Vidal</p>
-         <img src="imagens/imag21_dano (1).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/imag21_dano (2).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/imag21_dano (3).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/imag21_dano (4).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/imag21_dano (5).jpeg" alt="Motor Makila 1A1">
-         <img src="imagens/imag21_dano (6).jpeg" alt="Motor Makila 1A1"> 
-                
-      </div>
-  </div>
-  </div>
+    <div class="image-container">
+      <div class="image-title">Imagens capturadas da parte interna do motor</div>
+      <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen
+        Vidal</p>
+      <img src="imagens/1 _tubo (1).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1 _tubo (2).jpeg" alt="Componente interno do motor">
+      <img src="imagens/1 _tubo (3).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1 _tubo (4).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1 _tubo (5).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1 _tubo (6).jpeg" alt="Motor Makila 1A1">
+    </div>
+    <div class="image-container">
+      <div class="image-title"></div>
+      <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen
+        Vidal</p>
+      <img src="imagens/1_tubo2 (1).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1_tubo2 (2).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1_tubo2 (3).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1_tubo2 (4).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1_tubo2 (5).jpeg" alt="Motor Makila 1A1">
+    </div>
+    <div class="image-container">
+      <div class="image-title"></div>
+      <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen
+        Vidal</p>
+      <img src="imagens/1.2_base interna (1).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1.2_base interna (2).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1.2_base interna (3).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1.2_base interna (4).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/1.2_base interna (5).jpeg" alt="Motor Makila 1A1">
+    </div>
+    <div class="image-container">
+      <div class="image-title"></div>
+      <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen
+        Vidal</p>
+      <img src="imagens/2_ base interna (1).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/2_ base interna (2).jpeg" alt="Motor Makila 1A1">
+
+    </div>
+    <div class="image-container">
+      <div class="image-title"></div>
+      <p class="lead">** editar Vídeo da inspeção realizada pelos alunos no motor presente no arcevo da Prof. Jessen
+        Vidal</p>
+      <img src="imagens/imag21_dano (1).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/imag21_dano (2).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/imag21_dano (3).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/imag21_dano (4).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/imag21_dano (5).jpeg" alt="Motor Makila 1A1">
+      <img src="imagens/imag21_dano (6).jpeg" alt="Motor Makila 1A1">
+
+    </div>
+    </div>
+    </div>
     <!-- Documentos -->
     <div id="documentos" class="main-section">
-      
-             <div class="pdf-viewer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<!-- PDF 1 -->
-<div class="pdf-toolbar" style="margin-top: 40px;">
-    <strong><i class="fa-regular fa-file-pdf"></i> Manual Prático Inspeção Boroscópica Motor Makila 1A1</strong>
+      <div class="pdf-viewer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <a
-        href="docs/inspecao_makila_1a1.pdf"
-        download="inspecao_makila_1a1.pdf"
-        style="margin-left: 15px; padding: 5px 10px; background-color: #007bff; color: white; 
-        text-decoration: none; border-radius: 4px;"
-    >
-        <i class="fa-solid fa-download"></i> Baixar PDF
-    </a>
-</div>
+        <!-- PDF 1 -->
+        <div class="pdf-toolbar" style="margin-top: 40px;">
+          <strong><i class="fa-regular fa-file-pdf"></i> Manual Prático Inspeção Boroscópica Motor Makila 1A1</strong>
 
-<div class="pdf-stage" style="border: 1px solid #ccc; height: 600px; margin-top: 10px; margin-bottom: 40px;">
-    <iframe 
-        src="docs/Manual Pratico Inspeção boroscópica Motor Makila 1A1.pdf"
-        width="100%" 
-        height="100%" 
-        frameborder="0"
-    >
-    </iframe>
-</div>
-
-
-<!-- PDF 2 -->
-<div class="pdf-toolbar" style="margin-top: 40px;">
-    <strong><i class="fa-regular fa-file-pdf"></i> Análise do Motor Makila por Inspeção Boroscópica</strong>
-
-    <a
-        href="docs/ANÁLISE DO MOTOR MAKILA POR INSPEÇÃO BOROSCÓPICA PARA VERIFICAÇÃO DA INTEGRIDADE DA CÂMARA DE COMBUSTÃO,  Thiago e Railson.pdf"
-        download="ANÁLISE DO MOTOR MAKILA..."
-        style="margin-left: 15px; padding: 5px 10px; background-color: #007bff; color: white; 
-        text-decoration: none; border-radius: 4px;"
-    >
-        <i class="fa-solid fa-download"></i> Baixar PDF
-    </a>
-</div>
-
-<div class="pdf-stage" style="border: 1px solid #ccc; height: 600px; margin-top: 10px; margin-bottom: 40px;">
-    <iframe 
-        src="docs/ANÁLISE DO MOTOR MAKILA POR INSPEÇÃO BOROSCÓPICA PARA VERIFICAÇÃO DA INTEGRIDADE DA CÂMARA DE COMBUSTÃO,  Thiago e Railson.pdf"
-        width="100%" 
-        height="100%" 
-        frameborder="0"
-    >
-    </iframe>
-</div>
- 
-          <div class="pdf-stage" id="pdfStage"></div>
+          <a href="docs/inspecao_makila_1a1.pdf" download="inspecao_makila_1a1.pdf" style="margin-left: 15px; padding: 5px 10px; background-color: #007bff; color: white; 
+        text-decoration: none; border-radius: 4px;">
+            <i class="fa-solid fa-download"></i> Baixar PDF
+          </a>
         </div>
+
+        <div class="pdf-stage" style="border: 1px solid #ccc; height: 600px; margin-top: 10px;">
+          <iframe src="docs/Manual Pratico Inspeção boroscópica Motor Makila 1A1.pdf" width="100%" height="100%"
+            frameborder="0">
+          </iframe>
+        </div>
+
+
+        <!-- PDF 2 -->
+        <div class="pdf-toolbar" style="margin-top: 40px;">
+          <strong><i class="fa-regular fa-file-pdf"></i> Análise do Motor Makila por Inspeção Boroscópica</strong>
+
+          <a href="docs/ANÁLISE DO MOTOR MAKILA POR INSPEÇÃO BOROSCÓPICA PARA VERIFICAÇÃO DA INTEGRIDADE DA CÂMARA DE COMBUSTÃO,  Thiago e Railson.pdf"
+            download="ANÁLISE DO MOTOR MAKILA..." style="margin-left: 15px; padding: 5px 10px; background-color: #007bff; color: white; 
+        text-decoration: none; border-radius: 4px;">
+            <i class="fa-solid fa-download"></i> Baixar PDF
+          </a>
+        </div>
+
+        <div class="pdf-stage" style="border: 1px solid #ccc; height: 600px; margin-top: 10px;">
+          <iframe
+            src="docs/ANÁLISE DO MOTOR MAKILA POR INSPEÇÃO BOROSCÓPICA PARA VERIFICAÇÃO DA INTEGRIDADE DA CÂMARA DE COMBUSTÃO,  Thiago e Railson.pdf"
+            width="100%" height="100%" frameborder="0">
+          </iframe>
+        </div>
+
+
       </div>
     </div>
-
+    </div>
     <!-- Contato -->
     <div id="contato" class="main-section">
       <div class="section-header">
